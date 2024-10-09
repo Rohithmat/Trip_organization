@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Water Trip Organization</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyF1fzlpGSKi8l-_iePWlGTEC07ydzhieNcA&s') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            padding: 40px;
+            display: none; /* Initially hide body */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        .header-buttons {
+            margin-top: 20px;
+        }
+
+        .header-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .header-button:hover {
+            background-color: #004d40;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+        }
+
+        .contact-container {
+            background: rgba(255, 255, 255, 0.9); /* White background */
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            color: #000; /* Black text color for readability */
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #00c6ff;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #0072ff;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #00c6ff;
+            margin: 0 10px;
+        }
+
+        .notification {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #28a745; /* Green background for success */
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .icon {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <div class="header-buttons">
+            <a href="index.html" class="header-button">Home</a>
+            <a href="services.html" class="header-button">Services</a>
+            <a href="aboutus.html" class="header-button">About Us</a>
+            <a href="contactus.html" class="header-button">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" id="contactForm" onsubmit="return showNotification(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="notification" id="notification">
+            Your message has been sent successfully!
+        </div>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <p>
+                <a href="https://instagram.com/watertrip_org" target="_blank">
+                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Instagram
+                </a>
+                <a href="https://twitter.com/water_trip" target="_blank">
+                    <img class="icon" src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1727827200&semt=ais_hybrid" alt="X">X
+                </a>
+                <a href="https://wa.me/15551234567" target="_blank">
+                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
+                </a>
+                <a href="mailto:contact@watertrip.org" target="_blank">
+                    <img class="icon" src="https://w7.pngwing.com/pngs/799/918/png-transparent-mail-google-gmail-google-s-logo-icon-thumbnail.png" alt="Gmail">Email
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showNotification(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            document.getElementById('notification').style.display = 'block'; // Show notification
+            document.getElementById('contactForm').reset(); // Reset the form fields
+            return false; // Prevent actual form submission
+        }
+
+        // Show the body content after splash screen
+        window.onload = function() {
+            setTimeout(function() {
+                document.body.style.display = 'block'; // Show the body content
+            }, 3000); // 3 seconds
+        };
+    </script>
+
+</body>
+</html>

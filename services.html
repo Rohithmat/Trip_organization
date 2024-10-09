@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Water Trip Organization</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyF1fzlpGSKi8l-_iePWlGTEC07ydzhieNcA&s') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            padding: 40px;
+            display: none; /* Initially hide body */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        .header-buttons {
+            margin-top: 20px;
+        }
+
+        .header-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .header-button:hover {
+            background-color: #004d40;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 96, 115, 0.7); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 10px; /* Rounded corners */
+            display: inline-block; /* Center the background */
+        }
+
+        .event-container {
+            display: flex;
+            align-items: stretch; /* Stretch items to fill the container */
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            overflow: hidden; /* Prevent overflow */
+            height: 300px; /* Fixed height for the entire box */
+        }
+
+        .event-image {
+            flex: 1; /* Take equal space */
+            overflow: hidden;
+            border-radius: 12px 0 0 12px; /* Rounded left corners */
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Maintain aspect ratio */
+            transition: transform 0.3s;
+        }
+
+        .event-image:hover img {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        .event-details {
+            flex: 1; /* Take equal space */
+            padding: 20px;
+            border-radius: 0 12px 12px 0; /* Rounded right corners */
+            background: #ffffff; /* White background for details */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space out content */
+        }
+
+        .event-details h2 {
+            margin: 0 0 10px;
+            color: #007f8d;
+        }
+
+        .event-details p {
+            margin: 0 0 10px;
+        }
+
+        .go-button {
+            background-color: #005f73;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s;
+            display: inline-block; /* Align button properly */
+            margin-top: auto; /* Push button to bottom */
+            align-self: flex-end; /* Align to the right */
+        }
+
+        .go-button:hover {
+            background-color: #007f8d;
+        }
+
+        /* Splash Screen Styles */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999; /* High z-index to overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .splash-screen img {
+            width: 300px; /* Adjust size as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Exciting Events</h1>
+        <div class="header-buttons">
+            <a href="index.html" class="header-button">Home</a>
+            <a href="aboutus.html" class="header-button">About Us</a>
+            <a href="contactus.html" class="header-button">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="splash-screen" id="splash">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07ed52f9-65de-4d91-afc1-6d9594f0de81/dgcrl11-19db592b-2427-44de-b7e4-8c317c14eda1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3ZWQ1MmY5LTY1ZGUtNGQ5MS1hZmMxLTZkOTU5NGYwZGU4MVwvZGdjcmwxMS0xOWRiNTkyYi0yNDI3LTQ0ZGUtYjdlNC04YzMxN2MxNGVkYTEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.a_s0JB09Tq_FoG8eUQtwA_z_2kGcZjIM9SN_EpYc5gw" alt="Splash Screen">
+    </div>
+
+    <div class="event-container">
+        <div class="event-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3Pyyok_YffOX0Ffja4YwtUHhs6JsBqoBeA&s" alt="Event 1">
+        </div>
+        <div class="event-details">
+            <h2>Kayaking Adventure</h2>
+            <p>Join us for an unforgettable kayaking experience through beautiful waterways!</p>
+            <a href="Kayaking.html" class="go-button">Go!</a>
+        </div>
+    </div>
+
+    <div class="event-container">
+        <div class="event-image">
+            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0c/04/08/78.jpg" alt="Event 2">
+        </div>
+        <div class="event-details">
+            <h2>Snorkeling Fun</h2>
+            <p>Discover the underwater world with our guided snorkeling trips.</p>
+            <a href="Snorkeling.html" class="go-button">Go!</a>
+        </div>
+    </div>
+
+    <div class="event-container">
+        <div class="event-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_RLJ7BS2ZXxRerdSNpqwRLg01OvmWHXbqg&s" alt="Event 3">
+        </div>
+        <div class="event-details">
+            <h2>Surfing</h2>
+            <p>Relax while surfing and enjoy breathtaking views.</p>
+            <a href="Surphing.html" class="go-button">Go!</a>
+        </div>
+    </div>
+
+    <div class="event-container">
+        <div class="event-image">
+            <img src="https://assets.mixkit.co/videos/47818/47818-thumb-360-0.jpg" alt="Event 4">
+        </div>
+        <div class="event-details">
+            <h2>Campfire</h2>
+            <p>Experience the joy of memories with our expert guides.</p>
+            <a href="campfier.html" class="go-button">Go!</a>
+        </div>
+    </div>
+
+    <script>
+        // Show splash screen when loading the page
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('splash').style.display = 'none'; // Hide splash screen
+                document.body.style.display = 'block'; // Show the body content
+            }, 3000); // 3 seconds
+        };
+    </script>
+
+</body>
+</html>

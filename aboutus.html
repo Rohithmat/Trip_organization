@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Water Trip Organization</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyF1fzlpGSKi8l-_iePWlGTEC07ydzhieNcA&s') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            padding: 40px;
+            display: none; /* Initially hide body */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        .header-buttons {
+            margin-top: 20px;
+        }
+
+        .header-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .header-button:hover {
+            background-color: #004d40;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 96, 115, 0.7); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 10px; /* Rounded corners */
+            display: inline-block; /* Center the background */
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .about-details {
+            flex: 1;
+            padding: 20px;
+            border-radius: 12px 0 0 12px; /* Rounded left corners */
+            color: black; /* Set text color to black */
+        }
+
+        .about-details h2 {
+            color: #007f8d;
+            margin: 0 0 10px;
+        }
+
+        .about-details p {
+            margin: 10px 0;
+        }
+
+        .about-image {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 0 12px 12px 0; /* Rounded right corners */
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0 12px 12px 0; /* Rounded corners */
+            transition: transform 0.3s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0; /* Remove padding */
+        }
+
+        li {
+            background: rgba(0, 128, 128, 0.2); /* Light background for achievements */
+            margin: 5px 0; /* Space between items */
+            padding: 10px; /* Padding for items */
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Water Trip Organization</h1>
+        <div class="header-buttons">
+            <a href="index.html" class="header-button">Home</a>
+            <a href="services.html" class="header-button">Services</a>
+            <a href="contactus.html" class="header-button">Contact Us</a>
+            <a href="aboutus.html" class="header-button">About Us</a>
+        </div>
+    </header>
+
+    <h1>Welcome to Our About Us Page</h1>
+
+    <div class="about-container">
+        <div class="about-details">
+            <h2>Water Trip Organization</h2>
+            <p>We are a leading organization dedicated to providing unforgettable water adventure experiences. Our mission is to connect people with nature through exciting water sports and activities.</p>
+
+            <h3>Location:</h3>
+            <p>123 Adventure Lane, Watersport City, ST 45678</p>
+
+            <h3>Achievements:</h3>
+            <ul>
+                <li>Winner of the "Best Adventure Organization" award in 2022.</li>
+                <li>Successfully organized over 100+ water trips and events.</li>
+                <li>Certified by the International Water Sports Association.</li>
+            </ul>
+
+            <h3>Ratings:</h3>
+            <p>⭐️⭐️⭐️⭐️⭐️ (4.9/5 based on 1,000+ reviews)</p>
+        </div>
+        <div class="about-image">
+            <img src="https://img.freepik.com/premium-photo/professional-males-colleagues-hd-8k-wallpaper-stock-photographic-image_1033957-29071.jpg" alt="Water Trip Organization Image">
+        </div>
+    </div>
+
+    <script>
+        // Show the body content after splash screen
+        window.onload = function() {
+            setTimeout(function() {
+                document.body.style.display = 'block'; // Show the body content
+            }, 3000); // 3 seconds
+        };
+    </script>
+
+</body>
+</html>

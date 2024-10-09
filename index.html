@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Trip Organization</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            height: 70vh; /* Increased header height */
+        }
+
+        .wave-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 3.5em; /* Increased font size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .header-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .header-button:hover {
+            background-color: #004d40;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.4s ease; /* Faster transition */
+            will-change: transform; /* Optimize rendering */
+            align-items: center; /* Center alignment */
+        }
+
+        .card {
+            width: 300px; /* Set width for cards */
+            height: 300px; /* Set height for cards */
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, filter 0.3s;
+            margin: 0 10px; /* Margin for spacing */
+            position: relative;
+            flex-shrink: 0; /* Prevent card shrinking */
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Fit image within the card */
+            border-radius: 12px;
+        }
+
+        .active {
+            filter: none; /* Clear filter for active card */
+            z-index: 2; /* Bring active card to front */
+        }
+
+        .hidden {
+            filter: blur(5px); /* Blur effect for hidden cards */
+            z-index: 1; /* Send hidden cards to back */
+        }
+
+        .content {
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-top: 2px solid #00796b;
+        }
+
+        .details {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .details h2 {
+            margin-bottom: 15px;
+            color: #00796b; /* Header color */
+        }
+
+        .details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wave-header">
+            <img src="https://img.freepik.com/premium-photo/beautiful-tropical-beach-hd-8k-wallpaper-stock-photographic-image_949228-13214.jpg" alt="Water Trip Header">
+            <div class="header-title">Adventure Awaits!</div>
+            <div class="header-buttons">
+                <a href="services.html" class="header-button">Services</a>
+                <a href="contactus.html" class="header-button">Contact Us</a>
+                <a href="aboutus.html" class="header-button">About Us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <div class="carousel-container" id="carouselContainer">
+                <div class="card active">
+                    <img src="https://img.freepik.com/premium-photo/kayaking-hd-8k-wallpaper-stock-photographic-image_1030895-33584.jpg" alt="Kayaking Trip">
+                    <div class="content">
+                        <h2>Kayaking Adventure</h2>
+                        <p>Experience the thrill of kayaking through beautiful waters.</p>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpWVDsvi40Hs79olgBORhiX80ORwlQCk0KQ&s" alt="Snorkeling Trip">
+                    <div class="content">
+                        <h2>Snorkeling Fun</h2>
+                        <p>Discover the underwater world with our snorkeling trips.</p>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMvZAMpf_8MUIjA-sl9A8zjR8ns1_RcHt6uA&s" alt="Surfing">
+                    <div class="content">
+                        <h2>Surfing</h2>
+                        <p>Ride the waves and enjoy an exhilarating surfing experience.</p>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwnr9qHnTDe-aBy3FAhJHYOgX-rEkB8fD76_jsxMvODOw059DSkEAl-2cGNo9BE0HPsE&usqp=CAU" alt="Campfire">
+                    <div class="content">
+                        <h2>Campfire Nights</h2>
+                        <p>Enjoy cozy evenings around the campfire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details">
+            <h2>About Us</h2>
+            <p>At Water Trip Organization, we believe in creating unforgettable experiences on the water. Our team is dedicated to providing top-notch services in kayaking, snorkeling, surfing, and camping. Join us for an adventure of a lifetime!</p>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Kayaking Adventure - April 20, 2024</li>
+                <li>Snorkeling Safari - May 15, 2024</li>
+                <li>Surfing Competition - June 10, 2024</li>
+                <li>Summer Campfire Nights - July 5, 2024</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Water Trip Organization. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function showCarouselItem(index) {
+            const cards = document.querySelectorAll('.card');
+            const carouselContainer = document.getElementById('carouselContainer');
+            const totalCards = cards.length;
+
+            cards.forEach((card, i) => {
+                card.classList.add('hidden');
+                if (i === index) {
+                    card.classList.remove('hidden');
+                    card.classList.add('active');
+                }
+            });
+
+            // Calculate the offset to center the active card
+            const offset = -((index - Math.floor(totalCards / 2)) * (300 + 20)); // 300 is card width, 20 is margin
+            carouselContainer.style.transform = `translateX(${offset}px)`;
+        }
+
+        function carouselLoop() {
+            currentIndex = (currentIndex + 1) % document.querySelectorAll('.card').length;
+            showCarouselItem(currentIndex);
+        }
+
+        // Change the carousel every 3 seconds for faster transitions
+        setInterval(carouselLoop, 3000);
+    </script>
+</body>
+</html>

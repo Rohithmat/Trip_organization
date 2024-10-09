@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snorkeling Adventure - Water Trip Organization</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlsoEuBvQ95zrsOoXOvG_uDUqylVG7C0h_B9V_YTpI49-B8wI33bFqcyZU8YevKa2XO4&usqp=CAU') no-repeat center center fixed;
+            background-size: cover; /* Cover the entire viewport */
+            color: #fff;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .snorkeling-details {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .snorkeling-image {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .snorkeling-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .snorkeling-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .info {
+            margin: 10px 0;
+        }
+
+        .experience-box {
+            background: rgba(255, 255, 255, 0.8); /* White background for better readability */
+            border-radius: 15px; /* Rounded corners */
+            padding: 40px; /* Increased padding */
+            margin: 20px auto; /* Centered with margin */
+            max-width: 900px; /* Increased maximum width for the box */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        }
+
+        .experience-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Adjust margin to fit within the box */
+        }
+
+        .experience-gallery img {
+            width: 30%; /* Increased image size */
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Snorkeling Adventure</h1>
+
+    <div class="snorkeling-details">
+        <div class="snorkeling-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVLnzjtmEMYXtCJGhbiXNUgh0FG9wvkh6bcbtL3RQlMdKOTnfbvbbTYbFwxygtIotckE&usqp=CAU" alt="Snorkeling">
+        </div>
+        <div class="info">
+            <h2>Details</h2>
+            <p>Join us for an unforgettable snorkeling experience in vibrant coral reefs!</p>
+            <p><strong>Available Dates:</strong> Every weekend</p>
+            <p><strong>Time:</strong> 9:00 AM - 3:00 PM</p>
+            <p><strong>Price:</strong> $60 per person</p>
+        </div>
+        <div class="contact">
+            <p><strong>Contact Number:</strong> (123) 456-7890</p>
+        </div>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Snorkeling Experience Gallery</h2>
+    
+    <div class="experience-box">
+        <div class="experience-gallery">
+            <img src="https://wallpapers.com/images/hd/snorkeling-with-the-fishes-krvf5ufwktth8qrh.jpg" alt="Experience 1">
+            <img src="https://t4.ftcdn.net/jpg/01/40/29/13/360_F_140291362_nLXaxX2km4MEIWXxHvDZEJ5GIqf0F0Zs.jpg" alt="Experience 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg16aJa1Qno5oIdN0N6yOqqE1sUM-gFxqTPQ&s" alt="Experience 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBRWM-x-me3jOHXpAoAT9Ll6YYJXl_sLwX0gIVMuVmVTqLIigBIdP8vyjQJu0imG29mb4&usqp=CAU" alt="Experience 4">
+        </div>
+    </div>
+
+</body>
+</html>
